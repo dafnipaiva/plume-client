@@ -33,7 +33,7 @@ const SubscriptionList = ({ subscriptions, fetchSubscriptions }) => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5001/api/subscriptions/${id}`);
+      await axios.delete(`https://plume-server.onrender.com/api/subscriptions/${id}`);
       fetchSubscriptions(); // update subscription after delete
     } catch (error) {
       console.error('Error deleting subscription:', error);

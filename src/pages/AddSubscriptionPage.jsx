@@ -77,7 +77,7 @@ const AddSubscriptionPage = () => {
       console.log("Data being sent to the server:", subscriptionData); // Log to check
       console.log("dateString" + subscriptionData.nextPayment);
       await axios.post(
-        "http://localhost:5001/api/subscriptions/add",
+        "https://plume-server.onrender.com/api/subscriptions/add",
         subscriptionData
       );
       navigate("/subscriptions");

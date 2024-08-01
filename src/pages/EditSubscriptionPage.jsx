@@ -49,8 +49,8 @@ const EditSubscriptionPage = () => {
     const fetchSubscription = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5001/api/subscriptions/subscription/${id}`
-        );
+          `https://plume-server.onrender.com/api/subscriptions/subscription/${id}`
+          );
         const { name, amount, nextPayment } = response.data;
         const formattedNextPayment = format(
           parseISO(nextPayment),
@@ -127,7 +127,7 @@ const EditSubscriptionPage = () => {
 
     try {
       await axios.put(
-        `http://localhost:5001/api/subscriptions/${id}`,
+        `https://plume-server.onrender.com/api/subscriptions/${id}`,
         subscriptionData
       );
       navigate("/subscriptions");

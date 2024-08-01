@@ -11,7 +11,7 @@ const SubscriptionPage = () => {
 
   const fetchSubscriptions = useCallback(async () => {
     try {
-      const response = await axios.get(`http://localhost:5001/api/subscriptions/${user._id}`);
+      const response = await axios.get(`https://plume-server.onrender.com/api/subscriptions/${user._id}`);
       setSubscriptions(response.data);
     } catch (error) {
       console.error('Error fetching subscriptions:', error);

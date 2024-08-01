@@ -16,7 +16,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5001/api/users/login', credentials);
+      const response = await axios.post('https://plume-server.onrender.com/api/users/login', credentials);
       if (response.data.success) {
         login(response.data.user); // update autentication state of user's data
         navigate('/subscriptions');
