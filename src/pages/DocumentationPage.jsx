@@ -28,6 +28,8 @@ const DocumentationPage = () => {
           <li>Easy subscription editing and removal</li>
           <li>Detailed view of total monthly expenses</li>
           <li>Documentation page with instructions and feature list</li>
+          <li>Two databases were implemented in MongoDB: one for subscriptions to save each user's subscriptions by ID, and another for users to allow access only with a login and password, with bcrypt implemented for password encryption.</li>
+          <li>All logos were sourced from Flaticon or directly from the company's website.</li>
         </ul>
       </div>
     </div>
